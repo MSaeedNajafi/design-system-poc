@@ -99,6 +99,37 @@ npm install
 npm run dev
 ```
 
-### 2. Start development server
+### 3. Open in browser
 
 http://localhost:5173
+
+## 🏗️ Architecture Principles
+
+### 1. Separation of concerns
+
+Design tokens, components, and themes are fully decoupled.
+
+### 2. Encapsulation
+
+Shadow DOM prevents style leakage and ensures predictable component styling.
+
+### 3. Token-driven theming
+
+All components derive their styling from CSS variables, enabling runtime theme switching without rebuilding components.
+
+### 4. Framework independence
+
+Components are built using native browser APIs, making them reusable in any stack (React, Vue, Angular, or vanilla).
+
+---
+
+## ⚖️ Trade-offs
+
+This POC intentionally avoids:
+
+- Complex build pipelines
+- TypeScript
+- Framework dependencies
+- Heavy abstraction layers
+
+This keeps the system lightweight and easy to adopt, but shifts more responsibility to architecture discipline and conventions.
