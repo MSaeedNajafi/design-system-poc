@@ -1,0 +1,21 @@
+[data-theme="dark"] {
+  --color-primary: #4f8cff; 
+  --color-surface: #12161c;
+  --color-surface-2: #1b222b;
+
+  --color-text: #ffffff;
+  --color-text-secondary: #b6c0cc;
+
+  --color-border: #2a3441;
+}
+
+[data-theme="light"] {
+  --color-primary: #1f6feb; 
+  --color-surface: #ffffff;
+  --color-surface-2: #f6f8fb;
+
+  --color-text: #111827;
+  --color-text-secondary: #4b5563;
+
+  --color-border: #e5e7eb;
+}

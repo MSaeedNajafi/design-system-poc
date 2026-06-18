@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #0055ff;
+  --color-surface: #ffffff;
+  --color-text: #222222;
+  --color-error: #d92d20;
+
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  --radius-md: 8px;
+
+  --font-family-base: Inter, sans-serif;
+  
+}

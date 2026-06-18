@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System Demo</title>
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/themes.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <script type="module" src="/src/components/rabo-button.js"></script>
+    <script type="module" src="/src/components/rabo-input.js"></script>
+    <script type="module" src="/src/components/rabo-card.js"></script>
+    <script type="module" src="/src/components/rabo-checkbox.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <h1>Token-driven theming demo</h1>
+    <p>
+      The button below is a native Web Component with a closed-off Shadow DOM.
+      It receives ALL of its branding purely through CSS Custom Properties
+      defined on <code>:root</code> — no shared classes, no global stylesheet
+      leaking in.
+    </p>
+
+    <div class="theme-switcher">
+      <p id="theme-label">Current theme: light</p>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+
+    <rabo-card>
+      <h2>rabo-button (native Web Component, Shadow DOM)</h2>
+      <div class="row">
+        <rabo-button variant="primary">Primary</rabo-button>
+        <rabo-button variant="secondary">Secondary</rabo-button>
+        <rabo-button disabled>Disabled</rabo-button>
+      </div>
+    </rabo-card>
+    <rabo-card>
+      <h2>rabo-input (text field, also Shadow DOM)</h2>
+      <rabo-input
+        label="Email address"
+        placeholder="You@example.com"
+      ></rabo-input>
+      <rabo-input label="Name" placeholder="Your name"></rabo-input>
+      <rabo-input label="Disabled field" disabled></rabo-input>
+
+      <rabo-input
+        label="IBAN"
+        placeholder="NL00 RABO 0000 0000 00"
+        error="Please enter a valid IBAN"
+      ></rabo-input>
+      <rabo-input label="Name" error="This field is required"></rabo-input>
+    </rabo-card>
+
+    <rabo-card>
+      <h2>rabo-chckbox</h2>
+      <rabo-checkbox> I have read the terms and conditions</rabo-checkbox>
+      <rabo-checkbox checked> I agree to the terms </rabo-checkbox>
+    </rabo-card>
+
+    <rabo-card id="account-form">
+      <span slot="title">Open Account Form</span>
+
+      <rabo-input
+        label="Full name"
+        placeholder="John Doe"
+        required
+      ></rabo-input>
+
+      <rabo-input
+        label="Email"
+        placeholder="you@example.com"
+        required
+      ></rabo-input>
+
+      <rabo-input
+        label="IBAN"
+        placeholder="NL00 RABO 0000 0000 00"
+        required
+      ></rabo-input>
+
+      <rabo-checkbox required> This check is required. </rabo-checkbox>
+
+      <rabo-checkbox> This check is not required. </rabo-checkbox>
+
+      <div style="margin-top: var(--spacing-md)">
+        <rabo-button variant="primary" id="submitBtn"> Submit </rabo-button>
+      </div>
+    </rabo-card>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  font-family: var(--font-family-base);
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 2rem;
+}
+
+#theme-label {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  display: inline-block;
+}
+
+.theme-switcher {
+  margin-bottom: var(--spacing-sm);
+}
+
+button {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
